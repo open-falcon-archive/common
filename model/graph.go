@@ -139,3 +139,13 @@ type GraphLastResp struct {
 	Counter  string   `json:"counter"`
 	Value    *RRDData `json:"value"`
 }
+
+// 描述一个graph监控指标项
+type GraphCounter struct {
+	Endpoint string `json:"endpoint"`
+	Counter  string `json:"counter"`
+}
+
+type GraphCounters struct {
+	Counters []*GraphCounter `json:"counters"`
+}
